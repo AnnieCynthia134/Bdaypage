@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday da Mamaaaaaaa 💋💋🫂🫂🩵🤍</title>
+  <style>
+    :root{
+      --bg:#fff7fb;
+      --accent:#d63384;
+      --card:#ffffff;
+      --muted:#6b6b6b;
+      --radius:16px;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, system-ui, Arial;
+      background:linear-gradient(180deg,var(--bg),#fff);
+      color:#222;
+      display:flex;
+      min-height:100vh;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+    .card{
+      width:100%;
+      max-width:920px;
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    header{
+      padding:28px;
+      text-align:center;
+      background: linear-gradient(90deg, rgba(214,51,132,0.06), rgba(255,200,230,0.06));
+    }
+    h1{ margin:0; color:var(--accent); font-size:30px; }
+    p.lead{ margin:8px 0 0; color:var(--muted); font-size:15px; }
+
+    /* slideshow area */
+    .slideshow{
+      position:relative;
+      background:#000;
+      min-height:420px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .slide{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      transition: opacity 450ms ease;
+      pointer-events:none;
+    }
+    .slide.active{ opacity:1; pointer-events:auto; }
+    .slide img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:cover;
+      display:block;
+      width:auto;
+      height:auto;
+    }
+    /* caption */
+    .caption{
+      position:absolute;
+      left:18px;
+      bottom:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(0,0,0,0.35));
+      color:#fff;
+      padding:12px 14px;
+      border-radius:10px;
+      backdrop-filter: blur(6px);
+      font-size:15px;
+      max-width:80%;
+    }
+
+    /* controls */
+    .control{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(255,255,255,0.9);
+      border-radius:50%;
+      width:44px;height:44px;
+      display:flex;align-items:center;justify-content:center;
+      cursor:pointer; user-select:none;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    .control.left{ left:12px; }
+    .control.right{ right:12px; }
+    .control svg{ width:18px; height:18px; fill:var(--accent); }
+
+    /* thumbnails */
+    .thumbs{
+      display:flex;
+      gap:10px;
+      padding:16px;
+      overflow-x:auto;
+      align-items:center;
+      background: #fff;
+    }
+    .thumbs img{
+      width:92px; height:64px; object-fit:cover; border-radius:8px;
+      cursor:pointer; opacity:0.7; border:2px solid transparent;
+      transition:transform 160ms ease, opacity 160ms ease;
+    }
+    .thumbs img:hover{ transform:translateY(-4px); opacity:1; }
+    .thumbs img.active{ border-color:var(--accent); opacity:1; }
+
+    /* message area */
+    .message{
+      padding:22px 28px;
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+    }
+    .message .text{
+      flex:1;
+    }
+    .message .photo{
+      width:120px; height:120px; border-radius:12px; overflow:hidden; box-shadow: var(--shadow);
+    }
+    .message .photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+    /* footer */
+    footer{
+      padding:14px 18px;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      background:linear-gradient(180deg,#fff, rgba(255,240,250,0.6));
+    }
+
+    @media (max-width:640px){
+      .message{ flex-direction:column; align-items:center; text-align:center; }
+      .message .photo{ width:160px; height:160px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" role="main" aria-label="Bday page">
+    <header>
+      <div style="font-size:42px">🎂</div>
+      <h1>Happy Birthday, <span id="nameHere">My Love</span>!</h1>
+      <p class="lead">A little gallery of our moments — with all my love. 💖</p>
+    </header>
+
+    <!-- slideshow -->
+    <div class="slideshow" id="slideshow">
+      <!-- Slides: change src and data-caption as needed -->
+      <div class="slide active" data-index="0">
+        <img src="pic1.jpg" alt="pic 1"/>
+        <div class="caption">En Thangapullaa🥹💋,cheers to 22 .</div>
+      </div>
+
+      <div class="slide" data-index="1">
+        <img src="pic2.jpg" alt="pic 2"/>
+        <div class="caption">WE BOTH HOLDING OUR HANDS🤝🏻FOR THE FIRST TIME WITH LOT OF EMOTIONS🥹AND I FELT SO SPECIAL ON THAT MOMENT💋🫂,litearly 2 years aga pothu we faced lots of problems ups  and downs together💋🫂. Sanda poduvom thirumba senthuruvom but vitu ponunu enaikum nenachathu ila,en lowest layu ne enkuuda irunthuruka athuku romba nandrii💖🫂,epomey vitu kudukama epdiyea irupom,nama priyanuna yepovo pirunchurukalam But that didn't happen and for sure thats not gonna happen between us💯🚫.Enkudaye iru una nala vechu pathukuren pathupen🫂.Love you lots da Thangoo💋🫂</div>
+      </div>
+
+      <div class="slide" data-index="2">
+        <img src="pic3.jpg" alt="pic 3"/>
+        <div class="caption">unmaya epdila una nerla vechu pathukanunu konjanunu thonuthu da mudila🥹😭un kuda entha day la irukanunu nenachen but sitution amaiyala,kandipa next birthday unkuda irupen,Miss you lots thangamey💋🫂🩵🤍</div>
+      </div>
+
+      <div class="control left" id="prevBtn" title="Previous">
+        <svg viewBox="0 0 24 24"><path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+      </div>
+      <div class="control right" id="nextBtn" title="Next">
+        <svg viewBox="0 0 24 24"><path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+      </div>
+    </div>
+
+    <!-- thumbnails -->
+    <div class="thumbs" id="thumbs">
+      <img src="pic1.jpg" data-index="0" class="active" alt="thumb 1"/>
+      <img src="pic2.jpg" data-index="1" alt="thumb 2"/>
+      <img src="pic3.jpg" data-index="2" alt="thumb 3"/>
+    </div>
+
+    <!-- message area -->
+    <div class="message">
+      <div class="text">
+        <h2 style="margin:0 0 8px"> Once again Happy Birthday da Mama!</h2>
+        <p style="margin:0 0 8px; color:var(--muted)">
+          MWAAAAAAAAAAAAAHHHHHH....
+        </p>
+        <p style="margin:0; font-weight:600; color:var(--accent)">LOVE , <span id="senderName">Me 💕</span></p>
+      </div>
+
+      <div class="photo" aria-hidden="false">
+        <img src="pic1.jpg" alt="Small photo">
+      </div>
+    </div>
+
+    <footer>
+      <small>Click thumbnails or arrows to browse. Tip: replace captions & filenames in the HTML to personalize.</small>
+    </footer>
+  </div>
+
+  <!-- optional audio / play button -->
+  <button id="musicBtn" style="position:fixed;right:18px;bottom:18px;background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:10px;box-shadow:0 8px 18px rgba(214,51,132,0.16);cursor:pointer;">
+    ▶ Play music
+  </button>
+  <audio id="bgAudio" src="song.mp3" preload="none"></audio>
+
+  <script>
+    // -- Basic slideshow logic
+    const slides = Array.from(document.querySelectorAll('.slide'));
+    const thumbs = Array.from(document.querySelectorAll('.thumbs img'));
+    const prev = document.getElementById('prevBtn');
+    const next = document.getElementById('nextBtn');
+    const smallPhoto = document.querySelector('.message .photo img');
+    const nameEl = document.getElementById('nameHere');
+    const senderEl = document.getElementById('senderName');
+
+    let current = 0;
+
+    function showSlide(idx){
+      if(idx < 0) idx = slides.length - 1;
+      if(idx >= slides.length) idx = 0;
+      slides.forEach(s => s.classList.remove('active'));
+      thumbs.forEach(t => t.classList.remove('active'));
+      slides[idx].classList.add('active');
+      thumbs[idx].classList.add('active');
+      smallPhoto.src = slides[idx].querySelector('img').src;
+      // update name from data attributes if you set them (optional)
+      current = idx;
+    }
+
+    prev.addEventListener('click', () => showSlide(current - 1));
+    next.addEventListener('click', () => showSlide(current + 1));
+
+    thumbs.forEach(t => {
+      t.addEventListener('click', () => showSlide(parseInt(t.dataset.index)));
+    });
+
+    // keyboard support
+    document.addEventListener('keydown', e => {
+      if(e.key === 'ArrowLeft') showSlide(current - 1);
+      if(e.key === 'ArrowRight') showSlide(current + 1);
+    });
+
+    // music control with button (autoplay often blocked, so we provide a button)
+    const musicBtn = document.getElementById('musicBtn');
+    const audio = document.getElementById('bgAudio');
+    let playing = false;
+    musicBtn.addEventListener('click', () => {
+      if(!audio.src || audio.src.endsWith('song.mp3') === false){ // no song file
+        alert('No song.mp3 found in the folder. Add a song named song.mp3 to enable music.');
+        return;
+      }
+      if(!playing){
+        audio.play().catch(() => alert('Playback blocked — try interacting with the page first.'));
+        musicBtn.textContent = '⏸ Pause music';
+      } else {
+        audio.pause();
+        musicBtn.textContent = '▶ Play music';
+      }
+      playing = !playing;
+    });
+
+    // Personalize names quickly: change these values if you want
+    // (You can also remove these lines and edit header text directly)
+    nameEl.textContent = 'MAMA';
+    senderEl.textContent = 'BY Your WIFE';
+  </script>
+</body>
+</html>
